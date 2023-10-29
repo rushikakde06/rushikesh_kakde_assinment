@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
   LoginPageContainer,
-  LoginForm,  
+  LoginForm,
   Input,
   Button,
   GlobalStyles
@@ -36,14 +36,16 @@ const LoginPage = () => {
             placeholder="Username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            style={{ borderColor: username ? 'green' : '' }}
           />
           <Input
             type="password"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            style={{ borderColor: password ? 'green' : '' }}
           />
-          <Button type="submit">Login</Button>
+          <Button type="submit"  >Login</Button>
         </LoginForm>
       </LoginPageContainer>
     </>
